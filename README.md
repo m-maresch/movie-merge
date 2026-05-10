@@ -7,7 +7,7 @@
 Run the tool by passing the paths to your two video files. Video 1 will be the "start" and Video 2 will be the "end".
 
 ```
-python movie_merge.py ./video1.mp4 ./video2.mp4
+./movie_merge.sh ./video1.mp4 ./video2.mp4
 ```
 
 ## Installation
@@ -47,16 +47,16 @@ You can narrow the search to specific timestamps to save time:
 **Example:**
 
 ```
-python movie_merge.py video1.mp4 video2.mp4 --start-at-min 20 --end-at-min 1
+./movie_merge.sh video1.mp4 video2.mp4 --start-at-min 20 --end-at-min 1
 ```
 
 Scanning every single frame of a video is computationally expensive. Use the `-n` flag to adjust the sampling rate:
 
 | Command | Behavior | Outcome |
 | :--- | :--- | :--- |
-| `python movie_merge.py video1.mp4 video2.mp4 -n 1` | Sample every frame (Default) | Maximum precision, slow. |
-| `python movie_merge.py video1.mp4 video2.mp4 -n 10` | Sample every 10th frame | Balance of speed/accuracy. |
-| `python movie_merge.py video1.mp4 video2.mp4 -n 60` | Sample 1 frame per second | Rough matching, fast. |
+| `./movie_merge.sh video1.mp4 video2.mp4 -n 1` | Sample every frame (Default) | Maximum precision, slow. |
+| `./movie_merge.sh video1.mp4 video2.mp4 -n 10` | Sample every 10th frame | Balance of speed/accuracy. |
+| `./movie_merge.sh video1.mp4 video2.mp4 -n 60` | Sample 1 frame per second | Rough matching, fast. |
 
 ## License
 
