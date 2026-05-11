@@ -19,7 +19,7 @@ git clone https://github.com/m-maresch/movie-merge
 cd movie-merge
 ```
 
-Install dependencies in venv:
+Install dependencies in Python venv:
 
 ```
 python -m venv .
@@ -50,13 +50,12 @@ You can narrow the search to specific timestamps to save time:
 ./movie_merge.sh video1.mp4 video2.mp4 --start-at-min 20 --end-at-min 1
 ```
 
-Scanning every single frame of a video is computationally expensive. Use the `-n` flag to adjust the sampling rate:
+Scanning every single frame of a video is computationally expensive. The `-n` flag can be used to adjust the sampling rate:
 
 | Command | Behavior | Outcome |
 | :--- | :--- | :--- |
-| `./movie_merge.sh video1.mp4 video2.mp4 -n 1` | Sample every frame (Default) | Maximum precision, slow. |
+| `./movie_merge.sh video1.mp4 video2.mp4 -n 1` | Sample every frame (default) | Maximum precision, slow. |
 | `./movie_merge.sh video1.mp4 video2.mp4 -n 10` | Sample every 10th frame | Balance of speed/accuracy. |
-| `./movie_merge.sh video1.mp4 video2.mp4 -n 60` | Sample 1 frame per second | Rough matching, fast. |
 
 ## License
 
